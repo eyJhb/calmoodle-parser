@@ -9,7 +9,7 @@ use Valitron\Validator;
 $v = new Validator($_GET);
 $v->rule("required", "sid");
 $v->rule("integer", "sid");
-$v->rule("alphaNum", "name");
+$v->rule("ascii", "name");
 $v->rule("in", "lang", array("da","en"));
 $v->rule("dateFormat", ["startdate", "enddate"], "Y-m-d");
 ## output format

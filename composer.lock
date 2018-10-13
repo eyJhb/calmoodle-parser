@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bef6971f9caa969329f9ecfbefea1de4",
+    "content-hash": "105bd759cd4ede6515d0b26b5dcfcd58",
     "packages": [
         {
             "name": "eluceo/ical",
@@ -107,16 +107,16 @@
         },
         {
             "name": "vlucas/valitron",
-            "version": "v1.4.3",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/valitron.git",
-                "reference": "3c5463315bfa23b17f8949b100a960d035234e43"
+                "reference": "46ccdf1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/valitron/zipball/3c5463315bfa23b17f8949b100a960d035234e43",
-                "reference": "3c5463315bfa23b17f8949b100a960d035234e43",
+                "url": "https://api.github.com/repos/vlucas/valitron/zipball/46ccdf1",
+                "reference": "46ccdf1",
                 "shasum": ""
             },
             "require": {
@@ -152,13 +152,15 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-05-06T10:45:26+00:00"
+            "time": "2018-09-23T19:46:36+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "vlucas/valitron": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

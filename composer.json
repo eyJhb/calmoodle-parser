@@ -2,6 +2,6 @@
     "require": {
         "sunra/php-simple-html-dom-parser": "1.5.2",
         "eluceo/ical": "^0.14.0",
-        "vlucas/valitron": "^1.4"
+        "vlucas/valitron": "dev-master#46ccdf1"
     }
 }
