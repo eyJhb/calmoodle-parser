@@ -41,14 +41,26 @@ function getCalendarEvents($calBody) {
             $first = false;
             continue;
         }
+
+        # could be done inside the array, but need to calculate sha1
+        $date     = str_replace("/", "-", $event->find("td", 2)->plaintext);
+        $link     = "https://www.moodle.aau.dk".$event->find("a", 0)->href;
+        $name     = str_replace("\n", "", $event->find("a", 0)->plaintext);
+        $teacher  = $event->find("td", 7)->plaintext;
+        $time     = str_replace(" - ", "-", $event->find("td", 3)->plaintext);
+        $location = $event->find("td", 4)->plaintext;
+        $note     = $event->find("td", 6)->plaintext;
+        $sha1     = sha1($date.$link.$name.$teacher.$time.$location.$note);
+
         $events[] = [
-            'date' => str_replace('/', '-', $event->find('td', 2)->plaintext),
-            'link' => 'https://www.moodle.aau.dk'.$event->find('a', 0)->href,
-            'name' => str_replace("\n", '', $event->find('a', 0)->plaintext),
-            'teacher' => $event->find('td', 7)->plaintext,
-            'time' => str_replace(' - ', '-', $event->find('td', 3)->plaintext),
-            'location' => $event->find('td', 4)->plaintext,
-            'note' => $event->find('td', 6)->plaintext
+            'date'     => $date,
+            'link'     => $link,
+            'name'     => $name,
+            'teacher'  => $teacher,
+            'time'     => $time,
+            'location' => $location,
+            'note'     => $note,
+            'sha1'     => $sha1,
         ];
     }
 
