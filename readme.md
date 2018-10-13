@@ -15,3 +15,17 @@ You might want to get a shell for the Docker instance, which can be done using..
 docker ps 
 docker exec -it <instance-id> sh
 ```
+
+# Options
+The calendar supports the following GET options.
+
+```
+sid: the id of the calendar
+name: display name when imported
+startDate: Y-m-d (startdate of events)
+endDate: Y-m-d (enddate of events)
+output: ical or json (what to output - default ical)
+```
+
+If output using `json`, `sha1` field is included for each event.
+This can be used to validate a local cache.
