@@ -77,19 +77,12 @@ function generateICalObject($calendarName, $events) {
         $startDate  = new \DateTime($event['date'].' '.$timeSplit[0]);
         $endDate    = new \DateTime($event['date'].' .'.$timeSplit[1]);
         
-        $hash = hash('sha256',  $startDate->format('Y-m-d H:i:s').
-            $endDate->format('Y-m-d H:i:s').
-            $event['name'].
-            $event['location'].
-            $event['teacher'].
-            $event['note']);
-
         #create event
         $vEvent = new Event();
         $vEvent
         ->setDtStart($startDate)
         ->setDtEnd($endDate)
-        ->setUniqueId($hash)
+        ->setUniqueId($event["sha1"])
         ->setUrl($event['link'])
         ->setSummary($event['name'])
         ->setDescription(
