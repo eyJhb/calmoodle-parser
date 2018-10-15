@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "105bd759cd4ede6515d0b26b5dcfcd58",
+    "content-hash": "baa4be6f19edc1963ce68acb9063887c",
     "packages": [
         {
             "name": "eluceo/ical",
-            "version": "0.14.0",
+            "version": "0.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/markuspoerschke/iCal.git",
-                "reference": "5db245d5521a060129d0f14d154d65f32b804883"
+                "reference": "106862fc666b089cc83d196ebd113fb90659b1db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/markuspoerschke/iCal/zipball/5db245d5521a060129d0f14d154d65f32b804883",
-                "reference": "5db245d5521a060129d0f14d154d65f32b804883",
+                "url": "https://api.github.com/repos/markuspoerschke/iCal/zipball/106862fc666b089cc83d196ebd113fb90659b1db",
+                "reference": "106862fc666b089cc83d196ebd113fb90659b1db",
                 "shasum": ""
             },
             "require": {
@@ -25,9 +25,6 @@
             },
             "require-dev": {
                 "phpunit/phpunit": "^6.0"
-            },
-            "suggest": {
-                "ext-mbstring": "Massive performance enhancement of line folding"
             },
             "type": "library",
             "autoload": {
@@ -55,7 +52,7 @@
                 "ics",
                 "php calendar"
             ],
-            "time": "2018-03-13T19:39:55+00:00"
+            "time": "2017-06-07T14:15:12+00:00"
         },
         {
             "name": "sunra/php-simple-html-dom-parser",
@@ -152,7 +149,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2018-09-23T19:46:36+00:00"
+            "time": "2018-10-14T12:01:40+00:00"
         }
     ],
     "packages-dev": [],

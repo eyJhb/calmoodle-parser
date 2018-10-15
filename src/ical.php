@@ -1,4 +1,8 @@
 <?php
+$tz = "Europe/Berlin";
+$dtz = new \DateTimeZone($tz);
+date_default_timezone_set($tz);
+
 require(__DIR__ . "/../vendor/autoload.php");
 require("functions.php");
 
