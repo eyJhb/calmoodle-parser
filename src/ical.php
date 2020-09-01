@@ -28,6 +28,7 @@ if(!$v->validate()) {
 # get our vars
 $sid       = (int)$_GET["sid"];
 $name      = (isset($_GET["name"]) ? $_GET["name"] : "Calmoodle");
+$regexp    = (isset($_GET["regexp"]) ? $_GET["regexp"] : "");
 $lang      = (isset($_GET["lang"]) ? $_GET["lang"] : "en");
 $startdate = (isset($_GET["startdate"]) ? $_GET["startdate"] : date('Y-m-d', strtotime('-1 month')));
 $enddate   = (isset($_GET["startdate"]) ? $_GET["startdate"] : date('Y-m-d', strtotime('+6 months')));
@@ -38,7 +39,7 @@ if(!$calBody) {
 	exit(json_encode(["error" => "could not get calendar"]));
 }
 
-$events = getCalendarEvents($calBody);
+$events = getCalendarEvents($calBody, $regexp);
 if(!$events) {
 	exit(json_encode(["error" => "could not parse events"]));
 }

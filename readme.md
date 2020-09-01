@@ -22,6 +22,9 @@ The calendar supports the following GET options.
 ```
 sid: the id of the calendar
 name: display name when imported
+regexp: regular expression that is run on each name of the event, that must be true for it to 
+be included in the events. Remember to URL Encode it, e.g. #signal#i -> %23signal%23i
+lang: the lang to use when fetching from calmodle (da or en (default))
 startDate: Y-m-d (startdate of events)
 endDate: Y-m-d (enddate of events)
 output: ical or json (what to output - default ical)

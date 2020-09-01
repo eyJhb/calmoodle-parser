@@ -20,7 +20,7 @@ function getCalendar($sid, $lang, $startdate, $enddate) {
     return $resp;
 }
 
-function getCalendarEvents($calBody) {
+function getCalendarEvents($calBody, $includeRegexp) {
     $dom = HtmlDomParser::str_get_html($calBody);
             
     #find main table
@@ -51,6 +51,10 @@ function getCalendarEvents($calBody) {
         $location = $event->find("td", 4)->plaintext;
         $note     = $event->find("td", 6)->plaintext;
         $sha1     = sha1($date.$link.$name.$teacher.$time.$location.$note);
+
+        if($includeRegexp !== "" && preg_match($includeRegexp, $name) !== 1) {
+            continue;
+        }
 
         $events[] = [
             'date'     => $date,
